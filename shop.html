@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop - ShopEasy</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/shop.css">
+</head>
+<body>
+    <!-- Header/Navbar (same as main page) -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>ShopEasy</h1>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="main.html">Home</a></li>
+                    <li><a href="shop.html" class="active">Shop</a></li>
+                    <li><a href="#">Categories</a></li>
+                    <li><a href="abt.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="nav-icons">
+                <a href="#" id="search-btn"><i class="fas fa-search"></i></a>
+                <a href="#" id="user-btn"><i class="fas fa-user"></i></a>
+                <a href="#" id="cart-btn"><i class="fas fa-shopping-cart"></i><span class="cart-count">0</span></a>
+            </div>
+            <div class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+        
+        <!-- Search Box -->
+        <div class="search-box-container">
+            <div class="search-box">
+                <input type="text" placeholder="Search products...">
+                <button><i class="fas fa-search"></i></button>
+                <span class="close-search">&times;</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Shop Banner -->
+    <section class="shop-banner"style="background-image: url('images/shop bg.jpg')";>
+        <div class="container">
+            <h1>Our Products</h1>
+            <p>Discover amazing products at unbeatable prices</p>
+        </div>
+    </section>
+
+    <!-- Shop Content -->
+    <section class="shop-content">
+        <div class="container">
+            <!-- Horizontal Filter Bar -->
+            <div class="horizontal-filter-bar">
+                <div class="filter-group categories-dropdown">
+                    <button class="filter-dropdown-btn">
+                        <i class="fas fa-list"></i> Categories
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="filter-dropdown-content">
+                        <ul class="category-list">
+                            <li><a href="#" class="active">All Products</a></li>
+                            <li><a href="#">Traditional</a></li>
+                            <li><a href="#">Fashion</a></li>
+                            <li><a href="#">Home & Garden</a></li>
+                            <li><a href="#">Beauty</a></li>
+                            <li><a href="#">Electronics</a></li>
+                            <li><a href="#">Sports</a></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="filter-group price-filter">
+                    <span class="filter-label">Price:</span>
+                    <input type="text" id="min-price" placeholder="Min">
+                    <span>-</span>
+                    <input type="text" id="max-price" placeholder="Max">
+                    <button class="filter-btn">Apply</button>
+                </div>
+                
+                <div class="filter-group sort-by">
+                    <span class="filter-label">Sort by:</span>
+                    <select>
+                        <option>Default</option>
+                        <option>Price: Low to High</option>
+                        <option>Price: High to Low</option>
+                        <option>Newest</option>
+                        <option>Most Popular</option>
+                        <option>Best Rated</option>
+                    </select>
+                </div>
+                
+                <div class="filter-group view-options">
+                    <span class="filter-label">View:</span>
+                    <span class="grid-view active" title="Grid View"><i class="fas fa-th"></i></span>
+                    <span class="list-view" title="List View"><i class="fas fa-list"></i></span>
+                </div>
+            </div>
+            
+            <div class="shop-main">
+                <div class="product-grid" id="shop-product-grid">
+                    <!-- Products will be loaded here via JavaScript -->
+                    <div class="product-card">
+                        <div class="product-badge">Sale</div>
+                        <div class="product-thumb">
+                            <img src="src/product1.jpg" alt="Product 1">
+                            <div class="product-actions">
+                                <button class="quick-view"><i class="fas fa-eye"></i></button>
+                                <button class="add-to-wishlist"><i class="fas fa-heart"></i></button>
+                                <button class="add-to-cart"><i class="fas fa-shopping-cart"></i></button>
+                            </div>
+                        </div>
+                        <div class="product-details">
+                            <h3 class="product-title">Traditional Handmade Rug</h3>
+                            <div class="product-price">
+                                <span class="current-price">$89.99</span>
+                                <span class="old-price">$120.00</span>
+                            </div>
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                                <span>(24)</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- More product cards would be here -->
+                </div>
+                <div class="pagination">
+                    <a href="#" class="page-nav"><i class="fas fa-chevron-left"></i></a>
+                    <a href="#" class="page-number active">1</a>
+                    <a href="#" class="page-number">2</a>
+                    <a href="#" class="page-number">3</a>
+                    <a href="#" class="page-number">4</a>
+                    <a href="#" class="page-nav"><i class="fas fa-chevron-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Newsletter Section (same as main page) -->
+    <section class="newsletter">
+        <div class="container">
+            <div class="newsletter-content">
+                <h2>Subscribe to Our Newsletter</h2>
+                <p>Get the latest updates on new products and upcoming sales</p>
+                <form>
+                    <input type="email" placeholder="Enter your email address">
+                    <button type="submit" class="btn">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer (same as main page) -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>ShopEasy</h3>
+                    <p>Your one-stop shop for all your needs. Quality products at affordable prices.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="main.html">Home</a></li>
+                        <li><a href="index.html">Shop</a></li>
+                        <li><a href="abt.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Customer Service</h3>
+                    <ul>
+                        <li><a href="#">My Account</a></li>
+                        <li><a href="#">Order Tracking</a></li>
+                        <li><a href="#">Wishlist</a></li>
+                        <li><a href="#">Returns</a></li>
+                        <li><a href="#">Shipping Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Contact Info</h3>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Street, City, Country</li>
+                        <li><i class="fas fa-phone"></i> +1 234 567 890</li>
+                        <li><i class="fas fa-envelope"></i> info@shopeasy.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 ShopEasy. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Shopping Cart Sidebar (same as main page) -->
+    <div class="cart-sidebar">
+        <div class="cart-header">
+            <h3>Your Cart</h3>
+            <span class="close-cart">&times;</span>
+        </div>
+        <div class="cart-items" id="cart-items">
+            <!-- Cart items will be loaded here -->
+            <p class="empty-cart">Your cart is empty</p>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total:</span>
+                <span class="total-price">$0.00</span>
+            </div>
+            <button class="btn checkout-btn">Proceed to Checkout</button>
+        </div>
+    </div>
+    <div class="cart-overlay"></div>
+
+    <script src="js/main.js"></script>
+    <script src="js/shop.js"></script>
+</body>
+</html>
