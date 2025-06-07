@@ -1,0 +1,105 @@
+.contact-hero {
+    background: linear-gradient(90deg, #ff6b35, #ff9244);
+    color: white;
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.contact-form {
+    background: white;
+    padding: 40px;
+    text-align: center;
+}
+
+.contact-form label {
+    font-size: 1.2rem;
+    display: block;
+    margin: 10px 0;
+    color: #444;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.contact-form button {
+    background: #ff6b35;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.contact-form button:hover {
+    background: #ff9244;
+}
+/* Navbar Styles */
+nav {
+    background-color:#ff9244; /* Adjust color as needed */
+    color: white;
+    padding: 15px;
+}
+
+nav ul {
+    display: flex; /* Makes menu horizontal */
+    justify-content: center; /* Centers items */
+    gap: 20px; /* Adds space between items */
+    list-style: none;
+}
+
+nav ul li {
+    display: inline-block;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.2rem;
+    padding: 10px 15px;
+    transition: 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: white;
+    color:#ff9244;
+    border-radius: 5px;
+}
+
+/* Mobile-Friendly Menu */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column; /* Stack links on mobile */
+        text-align: center;
+    }
+
+    nav ul li {
+        margin-bottom: 10px;
+    }
+    .main-nav ul.active {
+        display: flex; /* Show menu when toggled */
+    }
+
+    .mobile-menu-btn {
+        display: block;
+    }
+}
+
+@media (max-width: 768px) {
+    .contact-hero h1 {
+        font-size: 2rem;
+    }
+
+    .contact-form label {
+        font-size: 0.9rem;
+    }
+
+    .contact-form button {
+        font-size: 0.9rem;
+        padding: 6px 12px;
+    }
+}
